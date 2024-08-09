@@ -1,24 +1,13 @@
-/*import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import styles from 'styles.js';
-import Layout from './layout.js';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}*/
 import React from 'react';
 import { SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from './src/screens/LoginScreen';
-import Screen01 from './src/screens/Screen01';
+import a from './src/app/a';
+import b from './src/app/b';
+import c from './src/app/c';
 import 'react-native-gesture-handler';
 import './gesture-handler';
+import 'styles.js';
 
 
 const Stack = createStackNavigator();
@@ -28,12 +17,17 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="LoginScreen">
-          <Stack.Screen name="LoginScreen" component={LoginScreen}
+        <Stack.Navigator initialRouteName="a">
+          <Stack.Screen name="a" component={a}
           options={{ headerShown: false, headerStyle: { backgroundColor: '#f0f0f0' } }} />
-          <Stack.Screen name="Screen01" component={Screen01}
+          <Stack.Screen name="b" component={b}
           options={({ navigation }) => ({
-          title: 'Screen01 titulo...',
+          title: 'b titulo...',
+          headerStyle: { backgroundColor: '#f0f0f0' },
+          })} />
+           <Stack.Screen name="c" component={c}
+          options={({ navigation }) => ({
+          title: 'c titulo...',
           headerStyle: { backgroundColor: '#f0f0f0' },
           })} />
         </Stack.Navigator>
@@ -43,45 +37,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  button: {
-    padding: 10,
-    backgroundColor: '#007BFF',
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-  },
-};
-
-const LoginScreen = ({ navigation }) => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Welcome to the Login Screen</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Screen01')}
-      >
-        <Text style={styles.buttonText}>Go to Screen 01</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
-  );
-};
-
-const Screen01 = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>This is Screen 01</Text>
-    </SafeAreaView>
-  );
-};
-
-export { LoginScreen, Screen01 };

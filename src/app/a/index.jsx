@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
 import React from 'react';
-import './style.css';
+import { SafeAreaView, Text } from 'react-native';
+import './style.js';
 import Layout from '../layout.js';
 
 const a = () =>{
-    <p>Lara</p>
-}
+    return (
+        <SafeAreaView style={style.container}>
+          <Text>Lara</Text>
+        </SafeAreaView>
+      );
+}    
 
 export default a;

@@ -7,10 +7,10 @@ const NavBar= ()=>{
         <nav style={style.nav}>
 
             <ul style={style.ul}>
-                <li className='li' style={style.li}><Link style={style.a} href ="/">a</Link> </li>
-                <li className='li' style={style.li}><Link style={style.a} href ="/a">b</Link> </li>
-                <li className='li' style={style.li}><Link style={style.a} href ="/b">c</Link> </li>
-                <li className='li' style={style.li}><Link style={style.a} href ="/c">d</Link> </li>
+                <li className='li' style={style.li}><Link style={style.a} href ="/a">a</Link> </li>
+                <li className='li' style={style.li}><Link style={style.a} href ="/b">b</Link> </li>
+                <li className='li' style={style.li}><Link style={style.a} href ="/c">c</Link> </li>
+                <li className='li' style={style.li}><Link style={style.a} href ="/d">d</Link> </li>
                 
             </ul>
     </nav>  

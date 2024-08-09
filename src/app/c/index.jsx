@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { SafeAreaView, Text } from 'react-native';
 import React from 'react';
-import './style.css';
+import './style.js';
 import Layout from '../layout.js';
 
 const c = () =>{
-<p>Eitan</p>
+    return (
+        <SafeAreaView style={style.container}>
+          <Text>Eitan</Text>
+        </SafeAreaView>
+      );
 }
 export default c;

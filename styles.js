@@ -7,5 +7,14 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    button: {
+      padding: 10,
+      backgroundColor: '#007BFF',
+      borderRadius: 5,
+    },
+    buttonText: {
+      color: '#fff',
+      fontSize: 16,
+    },  
   });
 export default styles;
