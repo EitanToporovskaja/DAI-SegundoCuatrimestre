@@ -8,4 +8,4 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
   });
-export default styles  
+export default styles;
