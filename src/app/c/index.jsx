@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, Text } from 'react-native';
 import React from 'react';
 import './style.js';
-import Layout from '../layout.js';
+import Layout from '../../../layout.js';
 
 const c = () =>{
     return (
